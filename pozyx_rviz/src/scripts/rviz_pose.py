@@ -49,7 +49,7 @@ class MarkerBasics(object):
 	def init_marker(self, index=0, z_val=0):
 		#Marker for tag		
 		self.marker_object=Marker()
-		self.marker_object.header.frame_id="/my_frame"
+		self.marker_object.header.frame_id="my_frame"
 		self.marker_object.header.stamp=rospy.get_rostime()
 		self.marker_object.ns="some_robot"
 		self.marker_object.id=index
@@ -77,7 +77,7 @@ class MarkerBasics(object):
 		
 		#Marker for anchor 1	
 		self.marker_object_a1=Marker()
-		self.marker_object_a1.header.frame_id="/my_frame"
+		self.marker_object_a1.header.frame_id="my_frame"
 		self.marker_object_a1.header.stamp=rospy.get_rostime()
 		self.marker_object_a1.ns="some_robot"
 		self.marker_object_a1.id=index
@@ -103,7 +103,7 @@ class MarkerBasics(object):
 		
 		#Marker for anchor 2	
 		self.marker_object_a2=Marker()
-		self.marker_object_a2.header.frame_id="/my_frame"
+		self.marker_object_a2.header.frame_id="my_frame"
 		self.marker_object_a2.header.stamp=rospy.get_rostime()
 		self.marker_object_a2.ns="some_robot"
 		self.marker_object_a2.id=index
@@ -130,7 +130,7 @@ class MarkerBasics(object):
 		
 		#Marker for anchor 3	
 		self.marker_object_a3=Marker()
-		self.marker_object_a3.header.frame_id="/my_frame"
+		self.marker_object_a3.header.frame_id="my_frame"
 		self.marker_object_a3.header.stamp=rospy.get_rostime()
 		self.marker_object_a3.ns="some_robot"
 		self.marker_object_a3.id=index
@@ -157,7 +157,7 @@ class MarkerBasics(object):
 		
 		#Marker for anchor 4	
 		self.marker_object_a4=Marker()
-		self.marker_object_a4.header.frame_id="/my_frame"
+		self.marker_object_a4.header.frame_id="my_frame"
 		self.marker_object_a4.header.stamp=rospy.get_rostime()
 		self.marker_object_a4.ns="some_robot"
 		self.marker_object_a4.id=index
@@ -245,11 +245,11 @@ def callback(data):
 
 	
 if __name__ == '__main__':
-    global posx, posy, posz, orix, oriy, oriz, oriw
-    rospy.init_node('marker_basic_node',anonymous=True)
-    markerbasics_object=MarkerBasics()
-    try:
+	posx, posy, posz, orix, oriy, oriz, oriw
+	rospy.init_node('marker_basic_node',anonymous=True)
+	markerbasics_object=MarkerBasics()
+	try:
 		markerbasics_object.start()
 		
-    except rospy.ROSInterruptException:
-        pass
+	except rospy.ROSInterruptException:
+		pass
