@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Configures the device list of a given Pozyx device (local and remote) for positioning.
 

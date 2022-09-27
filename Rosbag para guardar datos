@@ -1,0 +1,22 @@
+****	ROSBAG PARA GUARDAR DATOS	*****
+
+Para guardar todos los datos de un topico, ejecutarlas lineas:
+cd ~/bagfiles
+rosbag record -a
+
+Con esto, se almacenan en un archivo rosbag todo lo que se estè escuchando en ros ese momento.
+Se puede comprobar lo que se guardò con el comando:
+rosbag info <your bag file>
+
+Y para reproducir la informacion se usa:
+rosbag play <your bagfile>
+
+
+Cuando se quiere guardar solo de un determinado topico:
+rosbag record -O subset /turtle1/cmd_vel /turtle1/pose
+
+Para convertir los datos de un rosbag a csv, instalar las dependencias de este tutorial (python2):
+https://github.com/AtsushiSakai/rosbag_to_csv
+
+Luego, ejecutar la linea:
+rosrun rosbag_to_csv rosbag_to_csv.py 

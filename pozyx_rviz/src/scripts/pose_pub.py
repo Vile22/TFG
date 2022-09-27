@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 ROS node that publishes the pose (position + quaternion) of the Pozyx
 
@@ -31,7 +31,7 @@ def pozyx_pose_pub():
         quat = pypozyx.Quaternion()
         pozyx.doPositioning(coords, pypozyx.POZYX_3D, remote_id=remote_id)
         pozyx.getQuaternion(quat, remote_id=remote_id)
-        #rospy.loginfo("POS: %s, QUAT: %s" % (str(coords), str(quat)))
+        rospy.loginfo("POS: %s, QUAT: %s" % (str(coords), str(quat)))
         pub.publish(Point(coords.x, coords.y, coords.z),
                     Quaternion(quat.x, quat.y, quat.z, quat.w))
 

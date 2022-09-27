@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3s
 """ROS node that performs 3D positioning on Pozyx"""
 
 import pypozyx

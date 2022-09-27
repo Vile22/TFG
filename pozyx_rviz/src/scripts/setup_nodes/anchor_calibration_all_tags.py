@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Performs discovery for all tags in range and then configures the positioning
 anchor list on all the discovered devices.

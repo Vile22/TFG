@@ -1,0 +1,68 @@
+Para instalar el pozyx en Windows y Linux, referirse a este link:
+https://docs.pozyx.io/creator/Installation-&-setup.1189118159.html
+*No sirve en Linux el logeo de Creator
+
+Para hacer que funcione en Python 2 y 3, referirse al github de Pozyx-Python-library:
+https://github.com/pozyxLabs/Pozyx-Python-library
+
+Para ver los ejemplos en Python:
+https://docs.pozyx.io/creator/Tutorial-1:-Ready-to-range-(Python).1189118270.html
+
+Para cerrar un puerto tty en Linux:
+fuser -k /dev/ttyACM0
+
+En el archivo ready_to_range.py (se corre con python2/geany) utiliza dos anchor
+Para el ejemplo ready_to_localize (python2/geany) se usan 4 anchor y un tag.
+Se condigura las coordenadas y direcciones en la linea 176.
+remote_id se refiere al tag (objeto con IMU y acelerómetro)
+
+Para configurar en Geany para que corra con python3 o python2:
+https://stackoverflow.com/questions/29105941/how-do-i-make-python3-the-default-python-in-geany
+
+Add '3' to the end of "python" on the Build->Set Build Commands menu, as mentioned above.
+
+ROS:
+Al bajarse el paquete de Pozyx-ros, es necesario comentar la linea 104 del archivo CMakeLists.txt en catkin_pozyx/src/pozyx_ros_examples:
+#INCLUDE_DIRS include
+
+Para configurar la red UWB, se utiliza el script de posicionamiento en python:
+ready_to_localize (*pendiente ver la configuracion con ROS)
+
+Cuando la computadora está conectada al tag, en la linea 160:
+remote = False
+
+Cuando la computadora está conectada al quinto anchor y el tag sea remoto, en la linea 160:
+remote = True
+
+- Correr el programa y verificar que esté todo bien.
+
+Luego, ir a una terminal, y para obtener la pose (en cuaternios) correr las lineas:
+rosrun pozyx_ros_examples pose_pub
+
+Para obtener solo la posicion:
+rosrun pozyx_ros_examples positioning_pub
+
+Para obtener los angulos:
+rosrun pozyx_ros_examples euler_pub
+
+Para obtener la posicion y los angulos de euler:
+rosrun pozyx_ros_examples position_euler_pub
+
+Para la ejecución del nodo de ROS para visualizar la pose con markers, se ejecuta:
+rosrun pozyx_ros_examples rviz_pose.py
+
+La modificacion de los valores se hace en la funcion start() de la clase MarkerBasics.
+El tipo de mensajes para Markers es visualitzation_msgs.msg, Marker
+El tipo de mensajes para la pose es geometry_msgs.msg, Pose
+
+Para la ejecucion se necesitan (por ahora) 3 terminales:
+roscore
+rosrun pozyx_ros_examples pose_pub
+rosrun pozyx_ros_examples rviz_pose.py
+
+Para revisar la configuracion, los algoritmos, las frecuencias y demás, referirse al directorio obtenido con:
+pip3 show pypozyx
+Location: /home/david/.local/lib/python3.6/site-packages
+
+
+

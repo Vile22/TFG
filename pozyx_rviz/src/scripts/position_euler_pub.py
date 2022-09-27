@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 ROS node that performs positioning and Euler measurement on Pozyx
 

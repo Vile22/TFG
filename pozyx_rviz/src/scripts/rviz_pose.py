@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """ROS node that performs Visualization of Pose in RViz of Pozyx Tag"""
 
 import rospy

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """ROS node that publishes the device range between two Pozyx's."""
 
 import pypozyx

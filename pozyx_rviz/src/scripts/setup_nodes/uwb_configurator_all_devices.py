@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Meant to configure not only the device but the entire network
 on the same UWB settings.
