@@ -3,23 +3,23 @@ remote_tag_id: 0x6833
 
 #Id de anchor
 anchor1_id: 0x6866
-anchor2_id: 0x6865
-anchor3_id: 0x6831
-anchor4_id: 0x6854
+anchor2_id: 0x686f
+anchor3_id: 0x6854
+anchor4_id: 0x6831
 
 #Posicion de los anchor en mm (referencias)
-anchor1_x: 4550
+anchor1_x: 0
 anchor1_y: 0
-anchor1_z: 2100
+anchor1_z: 200
 
 anchor2_x: 0
-anchor2_y: 0
-anchor2_z: 2300
+anchor2_y: 4000
+anchor2_z: 150
 
-anchor3_x: 4550
-anchor3_y: 2980
-anchor3_z: 2400
+anchor3_x: 5000
+anchor3_y: 4000
+anchor3_z: 150
 
-anchor4_x: 0
-anchor4_y: 3020
-anchor4_z: 1600
+anchor4_x: 5000
+anchor4_y: 0
+anchor4_z: 200
