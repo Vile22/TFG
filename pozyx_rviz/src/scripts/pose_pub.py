@@ -29,7 +29,7 @@ def pozyx_pose_pub():
     while not rospy.is_shutdown():
         coords = pypozyx.Coordinates()
         quat = pypozyx.Quaternion()
-        pozyx.doPositioning(coords, pypozyx.POZYX_3D, remote_id=remote_id)
+        pozyx.doPositioning(coords, pypozyx.POZYX_2D, remote_id=remote_id)
         pozyx.getQuaternion(quat, remote_id=remote_id)
         rospy.loginfo("POS: %s, QUAT: %s" % (str(coords), str(quat)))
         pub.publish(Point(coords.x, coords.y, coords.z),

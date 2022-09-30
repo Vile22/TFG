@@ -8,18 +8,18 @@ anchor3_id: 0x6854
 anchor4_id: 0x6831
 
 #Posicion de los anchor en mm (referencias)
-anchor1_x: 0
+anchor1_x: 500
 anchor1_y: 0
-anchor1_z: 200
+anchor1_z: 0
 
 anchor2_x: 0
-anchor2_y: 4000
-anchor2_z: 150
+anchor2_y: 0
+anchor2_z: 0
 
-anchor3_x: 5000
-anchor3_y: 4000
-anchor3_z: 150
+anchor3_x: 0
+anchor3_y: 500
+anchor3_z: 0
 
-anchor4_x: 5000
-anchor4_y: 0
-anchor4_z: 200
+anchor4_x: 500
+anchor4_y: 500
+anchor4_z: 0

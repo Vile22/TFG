@@ -10,10 +10,10 @@ recommend to run the uwb_configurator node first.
 import pypozyx
 import rospy
 
-anchors = [pypozyx.DeviceCoordinates(0x6866, 1, pypozyx.Coordinates(4550, 0, 2100)),
-           pypozyx.DeviceCoordinates(0x6865, 1, pypozyx.Coordinates(0, 0, 2300)),
-           pypozyx.DeviceCoordinates(0x6831, 1, pypozyx.Coordinates(4550, 2980, 2400)),
-           pypozyx.DeviceCoordinates(0x6854, 1, pypozyx.Coordinates(0, 3020, 1600))]
+anchors = [pypozyx.DeviceCoordinates(0x6866, 1, pypozyx.Coordinates(4010, 2000, 0)),
+           pypozyx.DeviceCoordinates(0x686f, 1, pypozyx.Coordinates(0, 0, 0)),
+           pypozyx.DeviceCoordinates(0x6831, 1, pypozyx.Coordinates(0, 2000, 0)),
+           pypozyx.DeviceCoordinates(0x6854, 1, pypozyx.Coordinates(4010, 0, 0))]
 
 
 def set_anchor_configuration():
@@ -46,7 +46,7 @@ def set_anchor_configuration():
         if tag is None:
             rospy.loginfo("Local device configured")
         else:
-            rosply.loginfo("Device with ID 0x%0.4x configured." % tag)
+            rospy.loginfo("Device with ID 0x%0.4x configured." % tag)
     rospy.loginfo("Configuration completed! Shutting down node now...")
 
 

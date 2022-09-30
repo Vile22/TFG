@@ -3,6 +3,8 @@
 
 from PyQt4.QtGui  import *
 from PyQt4.QtCore import *
+#from PyQt5.QtGui  import *
+#from PyQt5.QtCore import *
 import sys
 
 class SimplePyQtGUIKit:
@@ -49,7 +51,8 @@ class SimplePyQtGUIKit:
         verticalLayoutScroll = QVBoxLayout(scrollAreaWidgetContents)
         layoutIndex=0
 
-        if msg is not "":
+        #if msg is not "":
+        if msg != "":
             label = QLabel(msg)
             layout.addWidget(label,layoutIndex,0)
             layoutIndex=layoutIndex+1
@@ -84,6 +87,6 @@ if __name__ == '__main__':
     #  optList=SimplePyQtGUIKit.GetCheckButtonSelect(["sample a","sample b","sample c"], title="Select sample", msg="Please select sample")
     #  print optList
     filePath=SimplePyQtGUIKit.GetFilePath(caption=u"Select files",filefilter="*py")
-    print filePath
+    print (filePath)
 
 
