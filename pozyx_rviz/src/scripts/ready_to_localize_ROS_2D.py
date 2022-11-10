@@ -178,10 +178,10 @@ if __name__ == "__main__":
     if use_processing:
         osc_udp_client = SimpleUDPClient(ip, network_port)
 
-    anchors = [DeviceCoordinates(0x686f, 1, Coordinates(0, 0, 480)),
-            DeviceCoordinates(0x6866, 1, Coordinates(0, 4000, 480)),
-            DeviceCoordinates(0x6831, 1, Coordinates(5000, 4000, 480)),
-            DeviceCoordinates(0x6854, 1, Coordinates(5000, 0, 480))]
+    anchors = [DeviceCoordinates(0x686f, 1, Coordinates(0, 0, 190)),    # Antes 480 z
+            DeviceCoordinates(0x6866, 1, Coordinates(0, 4000, 190)),
+            DeviceCoordinates(0x6831, 1, Coordinates(5000, 4000, 190)),
+            DeviceCoordinates(0x6854, 1, Coordinates(5000, 0, 190))]
     alg = input("UWB(1) o Tracking(2)")
     if (alg =='1'):
         algorithm = PozyxConstants.POSITIONING_ALGORITHM_UWB_ONLY
