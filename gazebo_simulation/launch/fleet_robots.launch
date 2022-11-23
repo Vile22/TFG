@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- load of parameters -->
+  <rosparam command="load" file="$(find fleet_robots)/maps/willow_garage/willow_garage.yaml" />
+
+  <node name="fleet_strategy" pkg="fleet_robots" type="fleet_strategy.py" output="screen"/>
+  <node name="marker_basic_node" pkg="fleet_robots" type="markers_rviz.py" output="screen"/>
+</launch>

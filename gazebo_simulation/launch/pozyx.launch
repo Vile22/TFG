@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- roslaunch arguments -->
+    <arg name="launch_rviz" default="true"/>
+    <arg name="file_rviz" default="tag_visualizer"/>
+
+    <!-- load of parameters -->
+    <rosparam command="load" file="$(find pozyx_rviz)/config/ids.yaml" />
+
+    <!-- node launching -->
+    <node name="marker_basic_node" pkg="pozyx_rviz" type="rviz_pose.py" output="screen"/>
+    <node name="pozyx_pose_node" pkg="pozyx_rviz" type="pose_pub.py" output="screen"/>
+
+    <!-- launch rviz -->
+    <node if="$(arg launch_rviz)" name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find pozyx_rviz)/rviz/$(arg file_rviz).rviz"/>
+
+</launch>
